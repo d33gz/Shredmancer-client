@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TabService } from '../tab.service';
 
 @Component({
   selector: 'app-tab-main',
@@ -6,17 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab-main.component.css']
 })
 export class TabMainComponent implements OnInit {
-  testTab: String = `|--------------------------------------------------------------------|\n
-  |--------------------------------------------------------------------|\n
-  |--------------------------------------------------------------------|\n
-  |----------9-10-9~---9-8~---8-7~-------------9-10-9~---9-8~---8-7~---|\n
-  |--------8---------10-----9----------------8---------10-----9--------|\n
-  |0-0-0------------------------------0-0-0----------------------------|`
-
-  constructor() { }
+  fullTab: any = [];
+  constructor(private tabService: TabService) {
+    this.fullTab = tabService.getTab();
+  }
 
   ngOnInit(): void {
-    console.log(this.testTab);
+    console.log("The Full Tab " + this.fullTab);
+    console.log("The Tab itself\n" + this.fullTab[0].tab[0].special);
   }
 
 }
