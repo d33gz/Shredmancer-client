@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TabService } from '../tab.service';
 
 @Component({
   selector: 'app-tab-main',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab-main.component.css']
 })
 export class TabMainComponent implements OnInit {
-
-  constructor() { }
+  fullTab: any = [];
+  constructor(private tabService: TabService) {
+    this.fullTab = tabService.getTab();
+  }
 
   ngOnInit(): void {
+    console.log("The Full Tab " + this.fullTab);
+    console.log("The Tab itself\n" + this.fullTab[0].tab[0].special);
   }
 
 }
