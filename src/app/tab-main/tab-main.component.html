@@ -4,21 +4,21 @@
 </select>
 <br>
 <div>
-  {{activeTab}}
+  <!-- {{activeTab}}
   <h1>{{ fullTab[activeTab].songName }}</h1>
   <h2>By {{ fullTab[activeTab].bandName }}</h2>
-  <h4>Song ID: {{ fullTab[activeTab].id }}</h4>
+  <h4>Song ID: {{ fullTab[activeTab].id }}</h4> -->
 
-  <span>Measure #{{ fullTab[activeTab].tab[0].measure}} </span>
-  <span>Repeat {{ fullTab[activeTab].tab[0].repeats }}x</span>
-  <p>{{ fullTab[activeTab].tab[0].rhythm.join('') }}</p>
-  <p>{{ fullTab[activeTab].tab[0].string1.join('') }}</p>
-  <p>{{ fullTab[activeTab].tab[0].string2.join('') }}</p>
-  <p>{{ fullTab[activeTab].tab[0].string3.join('') }}</p>
-  <p>{{ fullTab[activeTab].tab[0].string4.join('') }}</p>
-  <p>{{ fullTab[activeTab].tab[0].string5.join('') }}</p>
-  <p>{{ fullTab[activeTab].tab[0].string6.join('') }}</p>
-  <p>{{ fullTab[activeTab].tab[0].special.join('') }}</p>
+  <span>Measure #{{ fullTab.measure}} </span>
+  <span>Repeat {{ fullTab.repeats }}x</span>
+  <p>{{ fullTab.rhythm.join('') }}</p>
+  <p>{{ fullTab.string1.join('') }}</p>
+  <p>{{ fullTab.string2.join('') }}</p>
+  <p>{{ fullTab.string3.join('') }}</p>
+  <p>{{ fullTab.string4.join('') }}</p>
+  <p>{{ fullTab.string5.join('') }}</p>
+  <p>{{ fullTab.string6.join('') }}</p>
+  <p>{{ fullTab.special.join('') }}</p>
   <br>
   <span>Measure #{{ fullTab[activeTab].tab[1].measure}} </span>
   <span>Repeat {{ fullTab[activeTab].tab[1].repeats }}x</span>

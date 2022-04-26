@@ -10,13 +10,15 @@ export class TabMainComponent implements OnInit {
   activeTab: number | any;
   fullTab: any = [];
   constructor(private tabService: TabService) {
-    this.fullTab = tabService.getTab();
+    //this.fullTab = tabService.getTab();
     this.activeTab = 0;
   }
 
   findTab(event: any) {
     this.activeTab = Number(event.target.value)-1;
-    //this.tabService.getTab(this.activeTab)
+    this.fullTab = this.tabService.getServerTab(this.activeTab);
+    console.log("what do we got here? " + this.fullTab);
+    console.log("what do we got here? " + this.fullTab.string6);
   }
 
   ngOnInit(): void {
