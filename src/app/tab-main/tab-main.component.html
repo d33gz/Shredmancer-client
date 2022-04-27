@@ -1,6 +1,8 @@
 <select (change)="findTab($event)">
   <option value = 1>Raining Blood - Slayer</option>
   <option value = 2>Stairway to Heaven - Led Zeppelin</option>
+  <option value = 4>Kickstart My Heart - Mötley Crüe</option>
+  <option value = 5>Wish You Were Here - Pink Floyd</option>
 </select>
 <br>
 <div>
@@ -9,16 +11,29 @@
   <h2>By {{ fullTab[activeTab].bandName }}</h2>
   <h4>Song ID: {{ fullTab[activeTab].id }}</h4> -->
 
-  <span>Measure #{{ fullTab.measure}} </span>
-  <span>Repeat {{ fullTab.repeats }}x</span>
-  <p>{{ fullTab.rhythm.join('') }}</p>
-  <p>{{ fullTab.string1.join('') }}</p>
-  <p>{{ fullTab.string2.join('') }}</p>
-  <p>{{ fullTab.string3.join('') }}</p>
-  <p>{{ fullTab.string4.join('') }}</p>
-  <p>{{ fullTab.string5.join('') }}</p>
-  <p>{{ fullTab.string6.join('') }}</p>
-  <p>{{ fullTab.special.join('') }}</p>
+  <!-- <span>Measure #{{ fullTab.measure}} </span>
+  <span>Repeat {{ fullTab.repeats }}x</span> -->
+  <div ng-if="!fullTab">
+    <div *ngFor="let tab of fullTab;">
+      <p>{{ tab.rhythm.join('') }}</p>
+      <p>{{ tab.string1.join('') }}</p>
+      <p>{{ tab.string2.join('') }}</p>
+      <p>{{ tab.string3.join('') }}</p>
+      <p>{{ tab.string4.join('') }}</p>
+      <p>{{ tab.string5.join('') }}</p>
+      <p>{{ tab.string6.join('') }}</p>
+      <p>{{ tab.special.join('') }}</p>
+    </div>
+  </div>
+
+    <!-- <p>{{ fullTab.rhythm.join('') }}</p>
+    <p>{{ fullTab.string1.join('') }}</p>
+    <p>{{ fullTab.string2.join('') }}</p>
+    <p>{{ fullTab.string3.join('') }}</p>
+    <p>{{ fullTab.string4.join('') }}</p>
+    <p>{{ fullTab.string5.join('') }}</p>
+    <p>{{ fullTab.string6.join('') }}</p>
+    <p>{{ fullTab.special.join('') }}</p>
   <br>
   <span>Measure #{{ fullTab[activeTab].tab[1].measure}} </span>
   <span>Repeat {{ fullTab[activeTab].tab[1].repeats }}x</span>
@@ -30,4 +45,4 @@
   <p>{{ fullTab[activeTab].tab[1].string5.join('') }}</p>
   <p>{{ fullTab[activeTab].tab[1].string6.join('') }}</p>
   <p>{{ fullTab[activeTab].tab[1].special.join('') }}</p>
-</div>
+</div> -->

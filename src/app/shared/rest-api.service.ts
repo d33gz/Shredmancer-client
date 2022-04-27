@@ -24,9 +24,9 @@ export class RestApiService {
     .pipe(retry(1), catchError(this.handleError));
   }
 
-  getOneTab(id: any): Observable<Tab> {
+  getOneTab(id: any): Observable<Tab[]> {
     return this.http
-    .get<Tab>(this.apiURL + '/tabs/' + id)
+    .get<Tab[]>(this.apiURL + '/tabs/' + id)
     .pipe(retry(1), catchError(this.handleError));
   }
 
