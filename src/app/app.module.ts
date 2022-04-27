@@ -5,14 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { LandingComponent } from './landing/landing.component';
 import { TabMainComponent } from './tab-main/tab-main.component';
-import { SearchComponent } from './search/search.component';
+import { TabSearchComponent } from './tab-search/tab-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     TabMainComponent,
-    SearchComponent
+    TabSearchComponent
   ],
   imports: [
     AppRoutingModule,
