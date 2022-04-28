@@ -7,7 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
+  // variables 
+
+  
+
   constructor() { }
+  // logic here 
+  
+
+
+
+
 
   ngOnInit(): void {
   }
