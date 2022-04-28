@@ -1,5 +1,6 @@
 export interface Tab {
-  songId: number;
+  tabId: number;
+  songKey: number;
   measure: number;
   repeats: number;
   rhythm: string[];

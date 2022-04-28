@@ -5,18 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { LandingComponent } from './landing/landing.component';
 import { TabMainComponent } from './tab-main/tab-main.component';
-import { TabSearchComponent } from './tab-search/tab-search.component';
+import { CreateTabComponent } from './create-tab/create-tab.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     TabMainComponent,
-    TabSearchComponent
+    CreateTabComponent
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [],

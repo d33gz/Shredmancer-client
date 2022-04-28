@@ -8,7 +8,7 @@ import { Tab } from './Tab';
   providedIn: 'root'
 })
 export class RestApiService {
-  apiURL = 'http://localhost:3000'
+  apiURL = 'http://localhost:1890'
   
   constructor(private http: HttpClient) {}
 
@@ -20,13 +20,13 @@ export class RestApiService {
 
   getAllTabs(): Observable<Tab> {
     return this.http
-    .get<Tab>(this.apiURL + '/tabs')
+    .get<Tab>(this.apiURL + '/tabs/')
     .pipe(retry(1), catchError(this.handleError));
   }
 
-  getOneTab(id: any): Observable<Tab> {
+  getOneTab(id: any): Observable<Tab[]> {
     return this.http
-    .get<Tab>(this.apiURL + '/tabs')
+    .get<Tab[]>(this.apiURL + '/tabs/' + id)
     .pipe(retry(1), catchError(this.handleError));
   }
 
