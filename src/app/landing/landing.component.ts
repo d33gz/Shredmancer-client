@@ -9,9 +9,11 @@ export class LandingComponent implements OnInit {
 
   // variables 
 
+  
+
   constructor() { }
   // logic here 
-
+  
 
 
 

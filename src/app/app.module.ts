@@ -6,18 +6,32 @@ import { HttpClientModule } from '@angular/common/http';
 import { LandingComponent } from './landing/landing.component';
 import { TabMainComponent } from './tab-main/tab-main.component';
 import { TabSearchComponent } from './tab-search/tab-search.component';
+import { LoginComponent } from './login/login.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
+import { FAQComponent } from './faq/faq.component';
+import { FavoriteComponent } from './favorite/favorite.component';
+import { SubmitComponent } from './submit/submit.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     TabMainComponent,
-    TabSearchComponent
+    TabSearchComponent,
+    LoginComponent,
+    CreateAccountComponent,
+    FAQComponent,
+    FavoriteComponent,
+    SubmitComponent
+
+  
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
