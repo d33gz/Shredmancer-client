@@ -1,44 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="landing.component.css">
-    <link rel="stylesheet" href="landing.component.css">
-    <script src="script.js" defer></script>
-      <title>Navbar</title>
+   
 </head>
 <body>
     <nav class="navbar">
         <div class="brand-title">Shredmancer</div>
-        <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </a>
+    </nav>
+
+        <input id="toggle1" type="checkbox"/>
+        <label class="hamburger" for="toggle1">
+        <!-- <a href="#" class="toggle-button"> -->
+            <div class="top"></div>
+            <div class="meat"></div>
+            <div class="bottom"></div>
+        <!-- </a> -->
+        </label>
+
+    <nav class="navbar">
         <div class="navbar-links">
             <ul>
-                <li><a href="#">Questions: FAQ</a></li>
-                <li><a routerLink="./tab-component" routerLinkActive="active" class="nav-link"
+                <li><a routerLink="./faq" routerLinkActive="active" class="nav-link"
+                    >Questions: FAQ</a></li>
+                <li><a routerLink="./home" routerLinkActive="active" class="nav-link"
                     >Home Page</a></li>
+                <li><a routerLink="./submit" routerLinkActive="active" class="nav-link"
+                    >Submit tabs</a></li>
+                <li><a routerLink="./favorite" routerLinkActive="active" class="nav-link"
+                    >Favorites</a></li>
+                <li><a routerLink="./login" routerLinkActive="active" class="nav-link"
+                    >Login</a></li>
+                <li><a routerLink="./create" routerLinkActive="active" class="nav-link"
+                    >Sign Up</a></li>
+                <!-- <li><a routerlink="./search" routerLinkActive="active" class="nav-link"
+                    >Search</a></li> -->
 
-                
-
-
-                <li><a href="#">Submit tabs</a></li>
-                <li><a href="#">Favorites</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Sign Up</a></li>
-
-                
             </ul>
         </div>
     </nav>
-<!-- 
-    <p align="center">|--------------------------------------------------------------------|</p>
-    <p align="center">|--------------------------------------------------------------------|</p>
-    <p align="center">|--------------------------------------------------------------------|</p>
-    <p align="center">|----------9-10-9~---9-8~---8-7~-------------9-10-9~---9-8~---8-7~---|</p>
-    <p align="center">|--------8---------10-----9----------------8---------10-----9--------|</p>
-    <p align="center">|0-0-0------------------------------0-0-0----------------------------|</p> -->
 
 </body>
 </html>

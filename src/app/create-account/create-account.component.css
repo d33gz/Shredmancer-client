@@ -1,0 +1,64 @@
+html{
+    height: 100%;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #751d1d;
+    padding: auto;
+    box-sizing: border-box;
+}
+
+#main {
+    width: 50%;
+    height: 70%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 2px black;
+}
+
+#create-form {
+    align-self: flex-start;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 2px black;
+
+}
+.create-form-field {
+    color: #3a3a3a;
+}
+
+#create-form-field {
+    display: flex;
+    border: 2;
+    border-bottom: 1px solid #151615;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    outline: none;
+    padding: 0px 0px 5px 5px;
+}
+
+#createAccount-button {
+width: 100%;
+padding: 7px;
+border: none;
+border-radius: 5px;
+color: white;
+font-weight: bold;
+background-color: #3a3a3a;
+cursor: pointer;
+outline: none;
+}
+
+@media all and (max-width:500px) {
+    
+}
