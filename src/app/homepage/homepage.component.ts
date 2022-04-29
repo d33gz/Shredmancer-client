@@ -14,8 +14,8 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit(): void {
     this.songApi.getAllSongs().subscribe((data: {}) =>{setTimeout(() => {this.Songs = data}, 1000)});
-    
-    setTimeout(() => console.log(this.Songs), 3000);
+    console.log("before " + this.Songs);
+    setTimeout(() => console.log("after " + this.Songs), 3000);
   }
   tab : any = [];
   getTab(event : any) {
