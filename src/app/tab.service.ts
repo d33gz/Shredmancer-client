@@ -10,7 +10,8 @@ export class TabService {
 
   getTab(id: number): any {
     this.restApi.getOneTab(id).subscribe((data: {}) => {this.Tab = data});
-    return this.formatTab();
+    // return this.formatTab();
+    setTimeout(() => { this.formatTab() }, 2000); 
   }
 
   formatTab() {
@@ -24,6 +25,6 @@ export class TabService {
       this.Tab[i].string6 = this.Tab[i].string6.split(",");
       this.Tab[i].special = this.Tab[i].special.split(",");
     }
-    return this.Tab;
+    // return this.Tab;
   }
 }

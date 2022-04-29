@@ -1,0 +1,5 @@
+<ul *ngFor="let song of Songs;">
+    <li (click)="getTab($event)" value="{{song.id}}">{{ song.songName  }} - {{ song.bandName }} </li>
+    <!-- <li (click)="getTab($event)" value="{{song.id}}"><a routerLink="./tabview" routerLinkActive="active" class=""
+        ></a>{{ song.songName  }} - {{ song.bandName }} </li> -->
+</ul>
