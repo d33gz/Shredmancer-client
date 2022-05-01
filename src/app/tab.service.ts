@@ -85,6 +85,15 @@ export class TabService {
     this.Tab = [];
   };
   clearWorkingTab() {
-    this.WorkingTab = [];
+    this.WorkingTab = [{
+      rhythm: ["|  "],
+      string1: ["|  "],
+      string2: ["|  "],
+      string3: ["|  "],
+      string4: ["|  "],
+      string5: ["|  "],
+      string6: ["|  "],
+      special: ["|  "],
+    }];
   };
 }

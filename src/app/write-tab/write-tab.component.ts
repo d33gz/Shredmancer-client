@@ -7,7 +7,10 @@ import { TabService } from '../tab.service';
   styleUrls: ['./write-tab.component.css']
 })
 export class WriteTabComponent implements OnInit {
-  workingTab: any = [];
+  currentMeasure: number = 1;
+  barFill: number = 0;
+  workingMeasure: any = [];
+  restOfTab: any = [];
   beatRhythm: rhythm[] = [
     new rhythm('s '),
     new rhythm('e   '),
@@ -197,83 +200,137 @@ export class WriteTabComponent implements OnInit {
 
   ngOnInit(): void {};
 
-  onSubmit(measueForm: {value: any}) {
-    if (!measueForm.value.rhythm) {
-      alert("You need to specify a Rhythm.");
-    } else {
-      if (!measueForm.value.string1) {
-        measueForm.value.string1 = '- ';
-      }
-      if (!measueForm.value.string2) {
-        measueForm.value.string2 = '- ';
-      }
-      if (!measueForm.value.string3) {
-        measueForm.value.string3 = '- ';
-      }
-      if (!measueForm.value.string4) {
-        measueForm.value.string4 = '- ';
-      }
-      if (!measueForm.value.string5) {
-        measueForm.value.string5 = '- ';
-      }
-      if (!measueForm.value.string6) {
-        measueForm.value.string6 = '- ';
-      }
-      if (!measueForm.value.special) {
-        measueForm.value.special = '  ';
-      }
-      console.log(measueForm.value);
-      this.workingTab = this.tabService.addToWorkingTab(measueForm.value.rhythm, measueForm.value.string1, measueForm.value.string2, measueForm.value.string3, measueForm.value.string4, measueForm.value.string5, measueForm.value.string6, measueForm.value.special)
-      console.log("alright, what's in our Working Tab??\n" + this.workingTab)
+  onSubmit(measureForm: {value: any}) {
+    if (this.checkBar(measureForm.value.rhythm)) {
+      if (!measureForm.value.rhythm) {
+        alert("You need to specify a Rhythm.");
+      } else {
+        if (!measureForm.value.string1) {
+          measureForm.value.string1 = '- ';
+        }
+        if (!measureForm.value.string2) {
+          measureForm.value.string2 = '- ';
+        }
+        if (!measureForm.value.string3) {
+          measureForm.value.string3 = '- ';
+        }
+        if (!measureForm.value.string4) {
+          measureForm.value.string4 = '- ';
+        }
+        if (!measureForm.value.string5) {
+          measureForm.value.string5 = '- ';
+        }
+        if (!measureForm.value.string6) {
+          measureForm.value.string6 = '- ';
+        }
+        if (!measureForm.value.special) {
+          measureForm.value.special = '  ';
+        }
+        this.workingMeasure = this.tabService.addToWorkingTab(measureForm.value.rhythm, measureForm.value.string1, measureForm.value.string2, measureForm.value.string3, measureForm.value.string4, measureForm.value.string5, measureForm.value.string6, measureForm.value.special);
+      };
     };
-  }  
+  };
+
+  checkBar(t: string) {
+    if (t == 'e   ') {
+      if ((this.barFill + 4) > 32) {
+        alert('You can only have 4 Beats in a Measure right now.');
+        return false;
+      } else {
+        this.barFill += 4;
+      }
+    } else if (t == 'q       ') {
+      if ((this.barFill + 8) > 32) {
+        alert('You can only have 4 Beats in a Measure right now.');
+        return false;
+      } else {
+        this.barFill += 8;
+      }
+    } else if (t == 'h               ') {
+      if ((this.barFill + 16) > 32) {
+        alert('You can only have 4 Beats in a Measure right now.');
+        return false;
+      } else {
+        this.barFill += 16
+      }
+    } else if (t == 'w                               ') {
+      if ((this.barFill + 32) > 32) {
+        alert('You can only have 4 Beats in a Measure right now.');
+        return false;
+      } else {
+        this.barFill += 32;
+      }
+    } else {
+      if ((this.barFill + 2) > 32) {
+        alert('You can only have 4 Beats in a Measure right now.');
+        return false;
+      } else {
+        this.barFill += 2;
+      };
+    };
+    return true;
+  };
+
+  commitMeasure() {
+    if (this.barFill != 32) {
+      alert("You need to have 4 Full Beats to Commit a Measure.");
+    } else {
+      this.currentMeasure++;
+      this.barFill = 0;
+      this.restOfTab.push(this.workingMeasure[0]);
+      console.log("rest of Tab is + " + this.restOfTab)
+      this.workingMeasure = [];
+      this.tabService.clearWorkingTab();
+    };
+  };
+
 }
 
 export class rhythm {
   rhythm: string;
   constructor(beat: string) {
     this.rhythm = beat;
-  }
+  };
 };
 export class string1 {
   string1: string;
   constructor(beat: string) {
     this.string1 = beat;
-  }
+  };
 };
 export class string2 {
   string2: string;
   constructor(beat: string) {
     this.string2 = beat;
-  }
+  };
 };
 export class string3 {
   string3: string;
   constructor(beat: string) {
     this.string3 = beat;
-  }
+  };
 };
 export class string4 {
   string4: string;
   constructor(beat: string) {
     this.string4 = beat;
-  }
+  };
 };
 export class string5 {
   string5: string;
   constructor(beat: string) {
     this.string5 = beat;
-  }
+  };
 };
 export class string6 {
   string6: string;
   constructor(beat: string) {
     this.string6 = beat;
-  }
+  };
 };
 export class special {
   special: string;
   constructor(beat: string) {
     this.special = beat;
-  }
+  };
 };
