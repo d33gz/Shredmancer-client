@@ -9,182 +9,189 @@ import { TabService } from '../tab.service';
 export class WriteTabComponent implements OnInit {
   workingTab: any = [];
   beatRhythm: rhythm[] = [
-    new rhythm ('s'),
-    new rhythm ('e'),
-    new rhythm ('q'),
-    new rhythm ('h'),
-    new rhythm ('w')
+    new rhythm('s '),
+    new rhythm('e   '),
+    new rhythm('q       '),
+    new rhythm('h               '),
+    new rhythm('w                               ')
   ];
   beatString1: string1[] = [
-    new string1 (0),
-    new string1 (1),
-    new string1 (2),
-    new string1 (3),
-    new string1 (4),
-    new string1 (5),
-    new string1 (6),
-    new string1 (7),
-    new string1 (8),
-    new string1 (9),
-    new string1 (10),
-    new string1 (11),
-    new string1 (12),
-    new string1 (13),
-    new string1 (14),
-    new string1 (15),
-    new string1 (16),
-    new string1 (17),
-    new string1 (18),
-    new string1 (19),
-    new string1 (20),
-    new string1 (21),
-    new string1 (22),
-    new string1 (23),
-    new string1 (24),
+    new string1('- '),
+    new string1('0 '),
+    new string1('1 '),
+    new string1('2 '),
+    new string1('3 '),
+    new string1('4 '),
+    new string1('5 '),
+    new string1('6 '),
+    new string1('7 '),
+    new string1('8 '),
+    new string1('9 '),
+    new string1('10'),
+    new string1('11'),
+    new string1('12'),
+    new string1('13'),
+    new string1('14'),
+    new string1('15'),
+    new string1('16'),
+    new string1('17'),
+    new string1('18'),
+    new string1('19'),
+    new string1('20'),
+    new string1('21'),
+    new string1('22'),
+    new string1('23'),
+    new string1('24'),
   ];
   beatString2: string2[] = [
-    new string2 (0),
-    new string2 (1),
-    new string2 (2),
-    new string2 (3),
-    new string2 (4),
-    new string2 (5),
-    new string2 (6),
-    new string2 (7),
-    new string2 (8),
-    new string2 (9),
-    new string2 (10),
-    new string2 (11),
-    new string2 (12),
-    new string2 (13),
-    new string2 (14),
-    new string2 (15),
-    new string2 (16),
-    new string2 (17),
-    new string2 (18),
-    new string2 (19),
-    new string2 (20),
-    new string2 (21),
-    new string2 (22),
-    new string2 (23),
-    new string2 (24),
+    new string2('- '),
+    new string2('0 '),
+    new string2('1 '),
+    new string2('2 '),
+    new string2('3 '),
+    new string2('4 '),
+    new string2('5 '),
+    new string2('6 '),
+    new string2('7 '),
+    new string2('8 '),
+    new string2('9 '),
+    new string2('10'),
+    new string2('11'),
+    new string2('12'),
+    new string2('13'),
+    new string2('14'),
+    new string2('15'),
+    new string2('16'),
+    new string2('17'),
+    new string2('18'),
+    new string2('19'),
+    new string2('20'),
+    new string2('21'),
+    new string2('22'),
+    new string2('23'),
+    new string2('24'),
   ];
   beatString3: string3[] = [
-    new string3 (0),
-    new string3 (1),
-    new string3 (2),
-    new string3 (3),
-    new string3 (4),
-    new string3 (5),
-    new string3 (6),
-    new string3 (7),
-    new string3 (8),
-    new string3 (9),
-    new string3 (10),
-    new string3 (11),
-    new string3 (12),
-    new string3 (13),
-    new string3 (14),
-    new string3 (15),
-    new string3 (16),
-    new string3 (17),
-    new string3 (18),
-    new string3 (19),
-    new string3 (20),
-    new string3 (21),
-    new string3 (22),
-    new string3 (23),
-    new string3 (24),
+    new string3('- '),
+    new string3('0 '),
+    new string3('1 '),
+    new string3('2 '),
+    new string3('3 '),
+    new string3('4 '),
+    new string3('5 '),
+    new string3('6 '),
+    new string3('7 '),
+    new string3('8 '),
+    new string3('9 '),
+    new string3('10'),
+    new string3('11'),
+    new string3('12'),
+    new string3('13'),
+    new string3('14'),
+    new string3('15'),
+    new string3('16'),
+    new string3('17'),
+    new string3('18'),
+    new string3('19'),
+    new string3('20'),
+    new string3('21'),
+    new string3('22'),
+    new string3('23'),
+    new string3('24'),
   ];
   beatString4: string4[] = [
-    new string4 (0),
-    new string4 (1),
-    new string4 (2),
-    new string4 (3),
-    new string4 (4),
-    new string4 (5),
-    new string4 (6),
-    new string4 (7),
-    new string4 (8),
-    new string4 (9),
-    new string4 (10),
-    new string4 (11),
-    new string4 (12),
-    new string4 (13),
-    new string4 (14),
-    new string4 (15),
-    new string4 (16),
-    new string4 (17),
-    new string4 (18),
-    new string4 (19),
-    new string4 (20),
-    new string4 (21),
-    new string4 (22),
-    new string4 (23),
-    new string4 (24),
+    new string4('- '),
+    new string4('0 '),
+    new string4('1 '),
+    new string4('2 '),
+    new string4('3 '),
+    new string4('4 '),
+    new string4('5 '),
+    new string4('6 '),
+    new string4('7 '),
+    new string4('8 '),
+    new string4('9 '),
+    new string4('10'),
+    new string4('11'),
+    new string4('12'),
+    new string4('13'),
+    new string4('14'),
+    new string4('15'),
+    new string4('16'),
+    new string4('17'),
+    new string4('18'),
+    new string4('19'),
+    new string4('20'),
+    new string4('21'),
+    new string4('22'),
+    new string4('23'),
+    new string4('24'),
   ];
   beatString5: string5[] = [
-    new string5 (0),
-    new string5 (1),
-    new string5 (2),
-    new string5 (3),
-    new string5 (4),
-    new string5 (5),
-    new string5 (6),
-    new string5 (7),
-    new string5 (8),
-    new string5 (9),
-    new string5 (10),
-    new string5 (11),
-    new string5 (12),
-    new string5 (13),
-    new string5 (14),
-    new string5 (15),
-    new string5 (16),
-    new string5 (17),
-    new string5 (18),
-    new string5 (19),
-    new string5 (20),
-    new string5 (21),
-    new string5 (22),
-    new string5 (23),
-    new string5 (24),
+    new string5('- '),
+    new string5('0 '),
+    new string5('1 '),
+    new string5('2 '),
+    new string5('3 '),
+    new string5('4 '),
+    new string5('5 '),
+    new string5('6 '),
+    new string5('7 '),
+    new string5('8 '),
+    new string5('9 '),
+    new string5('10'),
+    new string5('11'),
+    new string5('12'),
+    new string5('13'),
+    new string5('14'),
+    new string5('15'),
+    new string5('16'),
+    new string5('17'),
+    new string5('18'),
+    new string5('19'),
+    new string5('20'),
+    new string5('21'),
+    new string5('22'),
+    new string5('23'),
+    new string5('24'),
   ];
   beatString6: string6[] = [
-    new string6 (0),
-    new string6 (1),
-    new string6 (2),
-    new string6 (3),
-    new string6 (4),
-    new string6 (5),
-    new string6 (6),
-    new string6 (7),
-    new string6 (8),
-    new string6 (9),
-    new string6 (10),
-    new string6 (11),
-    new string6 (12),
-    new string6 (13),
-    new string6 (14),
-    new string6 (15),
-    new string6 (16),
-    new string6 (17),
-    new string6 (18),
-    new string6 (19),
-    new string6 (20),
-    new string6 (21),
-    new string6 (22),
-    new string6 (23),
-    new string6 (24),
+    new string6('- '),
+    new string6('0 '),
+    new string6('1 '),
+    new string6('2 '),
+    new string6('3 '),
+    new string6('4 '),
+    new string6('5'),
+    new string6('6 '),
+    new string6('7 '),
+    new string6('8 '),
+    new string6('9 '),
+    new string6('10'),
+    new string6('11'),
+    new string6('12'),
+    new string6('13'),
+    new string6('14'),
+    new string6('15'),
+    new string6('16'),
+    new string6('17'),
+    new string6('18'),
+    new string6('19'),
+    new string6('20'),
+    new string6('21'),
+    new string6('22'),
+    new string6('23'),
+    new string6('24'),
   ];
   beatSpecial: special[] = [
-    new special ('b'),
-    new special ('h'),
-    new special ('v'),
-    new special ('p'),
-    new special ('t'),
-    new special ('i'),
-    new special ('let ring'),
+    new special ('  '),
+    new special ('b '),
+    new special ('h '),
+    new special ('v '),
+    new special ('p '),
+    new special ('t '),
+    new special ('i '),
+    new special ('lr'),
   ];
   constructor(public tabService: TabService) {};
 
@@ -195,25 +202,25 @@ export class WriteTabComponent implements OnInit {
       alert("You need to specify a Rhythm.");
     } else {
       if (!measueForm.value.string1) {
-        measueForm.value.string1 = -1;
+        measueForm.value.string1 = '- ';
       }
       if (!measueForm.value.string2) {
-        measueForm.value.string2 = -1;
+        measueForm.value.string2 = '- ';
       }
       if (!measueForm.value.string3) {
-        measueForm.value.string3 = -1;
+        measueForm.value.string3 = '- ';
       }
       if (!measueForm.value.string4) {
-        measueForm.value.string4 = -1;
+        measueForm.value.string4 = '- ';
       }
       if (!measueForm.value.string5) {
-        measueForm.value.string5 = -1;
+        measueForm.value.string5 = '- ';
       }
       if (!measueForm.value.string6) {
-        measueForm.value.string6 = -1;
+        measueForm.value.string6 = '- ';
       }
       if (!measueForm.value.special) {
-        measueForm.value.special = '-1';
+        measueForm.value.special = '  ';
       }
       console.log(measueForm.value);
       this.workingTab = this.tabService.addToWorkingTab(measueForm.value.rhythm, measueForm.value.string1, measueForm.value.string2, measueForm.value.string3, measueForm.value.string4, measueForm.value.string5, measueForm.value.string6, measueForm.value.special)
@@ -229,38 +236,38 @@ export class rhythm {
   }
 };
 export class string1 {
-  string1: number;
-  constructor(beat: number) {
+  string1: string;
+  constructor(beat: string) {
     this.string1 = beat;
   }
 };
 export class string2 {
-  string2: number;
-  constructor(beat: number) {
+  string2: string;
+  constructor(beat: string) {
     this.string2 = beat;
   }
 };
 export class string3 {
-  string3: number;
-  constructor(beat: number) {
+  string3: string;
+  constructor(beat: string) {
     this.string3 = beat;
   }
 };
 export class string4 {
-  string4: number;
-  constructor(beat: number) {
+  string4: string;
+  constructor(beat: string) {
     this.string4 = beat;
   }
 };
 export class string5 {
-  string5: number;
-  constructor(beat: number) {
+  string5: string;
+  constructor(beat: string) {
     this.string5 = beat;
   }
 };
 export class string6 {
-  string6: number;
-  constructor(beat: number) {
+  string6: string;
+  constructor(beat: string) {
     this.string6 = beat;
   }
 };
