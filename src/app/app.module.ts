@@ -14,6 +14,7 @@ import { FAQComponent } from './faq/faq.component';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { SubmitComponent } from './submit/submit.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CreateAccountComponent,
     FAQComponent,
     FavoriteComponent,
-    SubmitComponent
+    SubmitComponent,
+    HomepageComponent
   ],
   
   imports: [

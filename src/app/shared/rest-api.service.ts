@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 import { Tab } from './Tab';
+import { Song } from './Song';
+
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +19,12 @@ export class RestApiService {
       'Content-Type': 'application/json',
     }),
   };
+
+  getAllSongs(): Observable<Song> {
+    return this.http
+    .get<Song>(this.apiURL + '/songs/')
+    .pipe(retry(1), catchError(this.handleError));
+  }
 
   getAllTabs(): Observable<Tab> {
     return this.http
