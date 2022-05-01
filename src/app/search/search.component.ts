@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { RestApiService } from '../shared/rest-api.service';
 
 @Component({
   selector: 'app-search',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  @Input() searchDetails = {searchInput: ''};
 
-  constructor() { }
+  constructor(public restApi: RestApiService, public router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {};
+
+  search(searchData: any){
+    console.log("Grabbing Data: " + this.searchDetails.searchInput);
   }
 
 }
