@@ -8,15 +8,19 @@ import { FAQComponent } from './faq/faq.component';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { SubmitComponent } from './submit/submit.component';
 import { TabSearchComponent } from './tab-search/tab-search.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { WriteTabComponent } from './write-tab/write-tab.component';
 
 const routes: Routes = [
-  {path: 'home', component: TabMainComponent},
+  {path: 'tabview', component: TabMainComponent},
   {path: 'login', component: LoginComponent},
   {path: 'create', component: CreateAccountComponent},
   {path: 'faq', component: FAQComponent},
   {path: 'favorite', component: FavoriteComponent},
   {path: 'submit', component: SubmitComponent},
   {path: 'search', component: TabSearchComponent},
+  {path: 'homepage', component: HomepageComponent},
+  {path: 'write', component: WriteTabComponent}
 ];
 
 @NgModule({
