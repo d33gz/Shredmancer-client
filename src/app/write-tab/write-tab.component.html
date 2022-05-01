@@ -1,0 +1,79 @@
+<form #measureForm="ngForm" (ngSubmit)="onSubmit(measureForm)">
+  <label for="rhythm">Rhythm </label>
+  <select name="rhythm" ngModel>
+    <option [ngValue]="r.rhythm" *ngFor="let r of beatRhythm">
+      {{r.rhythm}}
+    </option>
+  </select>
+  <label for="string1"> String1 </label>
+  <select name="string1" ngModel>
+    <option [ngValue]="s1.string1" *ngFor="let s1 of beatString1">
+      {{s1.string1}}
+    </option>
+  </select>
+  <label for="string2"> String2 </label>
+  <select name="string2" ngModel>
+    <option [ngValue]="s2.string2" *ngFor="let s2 of beatString2">
+      {{s2.string2}}
+    </option>
+  </select>
+  <label for="string3"> String3 </label>
+  <select name="string3" ngModel>
+    <option [ngValue]="s3.string3" *ngFor="let s3 of beatString3">
+      {{s3.string3}}
+    </option>
+  </select>
+  <label for="string4"> String4 </label>
+  <select name="string4" ngModel>
+    <option [ngValue]="s4.string4" *ngFor="let s4 of beatString4">
+      {{s4.string4}}
+    </option>
+  </select>
+  <label for="string5"> String5 </label>
+  <select name="string5" ngModel>
+    <option [ngValue]="s5.string5" *ngFor="let s5 of beatString5">
+      {{s5.string5}}
+    </option>
+  </select>
+  <label for="string6"> String6 </label>
+  <select name="string6" ngModel>
+    <option [ngValue]="s6.string6" *ngFor="let s6 of beatString6">
+      {{s6.string6}}
+    </option>
+  </select>
+  <label for="special"> Special </label>
+  <select name="special" ngModel>
+    <option [ngValue]="sp.special" *ngFor="let sp of beatSpecial">
+      {{sp.special}}
+    </option>
+  </select>
+  <button type="submit">Commit Beat</button>
+</form>
+<div>
+  <span>Active Measure: {{currentMeasure}}   |||   </span>
+  <span>Beat Count {{barFill}} / 32   |||   </span>
+  <span><button (click)="commitMeasure()">Commit Measure</button></span>
+</div>
+<div ng-if="!workingMeasure">
+  <div *ngFor="let tab of workingMeasure;">
+    <p>{{ tab.rhythm.join('') }}</p>
+    <p>{{ tab.string1.join('') }}</p>
+    <p>{{ tab.string2.join('') }}</p>
+    <p>{{ tab.string3.join('') }}</p>
+    <p>{{ tab.string4.join('') }}</p>
+    <p>{{ tab.string5.join('') }}</p>
+    <p>{{ tab.string6.join('') }}</p>
+    <p>{{ tab.special.join('') }}</p>
+  </div>
+  <div ng-if="!restOfTab">
+    <div *ngFor="let tab of restOfTab;">
+      <p>{{ tab.rhythm.join('') }}</p>
+      <p>{{ tab.string1.join('') }}</p>
+      <p>{{ tab.string2.join('') }}</p>
+      <p>{{ tab.string3.join('') }}</p>
+      <p>{{ tab.string4.join('') }}</p>
+      <p>{{ tab.string5.join('') }}</p>
+      <p>{{ tab.string6.join('') }}</p>
+      <p>{{ tab.special.join('') }}</p>
+    </div>
+</div>
