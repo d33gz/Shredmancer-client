@@ -19,7 +19,7 @@ export class TabMainComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.fullTab=this.tabService.Tab
+    this.fullTab = this.tabService.Tab
     console.log("In tab View " + this.fullTab[0])
     console.dir(this.fullTab)
     console.dir(this.fullTab[0])

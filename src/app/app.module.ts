@@ -15,6 +15,7 @@ import { FavoriteComponent } from './favorite/favorite.component';
 import { SubmitComponent } from './submit/submit.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomepageComponent } from './homepage/homepage.component';
+import { WriteTabComponent } from './write-tab/write-tab.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     FAQComponent,
     FavoriteComponent,
     SubmitComponent,
-    HomepageComponent
+    HomepageComponent,
+    WriteTabComponent
   ],
   
   imports: [
