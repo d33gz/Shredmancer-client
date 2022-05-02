@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>TAB Search</title>
+        <link rel="stylesheet" href="search.component.css">
+    </head>
+
+    <body>
+        <form id="searchForm">
+            <input type="text" [(ngModel)]="searchDetails.searchInput" name="search-input" id="search-field" class="search-input-field" placeholder="Search TABs..."><br>
+            <button type="button" id="search-form-submit" (click)="search(searchDetails)">Search</button><br>
+        </form>
+    </body>
+
+</html>
