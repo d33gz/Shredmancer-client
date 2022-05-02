@@ -19,6 +19,7 @@ import { HomeComponent } from './home/home.component';
 import { WriteTabComponent } from './write-tab/write-tab.component';
 import { SearchComponent } from './search/search.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

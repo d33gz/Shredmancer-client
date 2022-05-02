@@ -21,8 +21,6 @@ export class RestApiService {
     }),
   };
 
-
-
   loginAccount(account: any): Observable<Account> {
     return this.http
       .post<Account>(

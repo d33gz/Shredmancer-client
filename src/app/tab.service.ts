@@ -20,10 +20,8 @@ export class TabService {
 
   getTab(id: number): any {
     this.restApi.getOneTab(id).subscribe((data: {}) => {this.Tab = data});
-
     setTimeout(() => { this.formatTab() }, 2000); 
   };
-
   formatTab() {
     for (let i = 0; i < this.Tab.length; i++) {
       this.Tab[i].rhythm = this.Tab[i].rhythm.split(",");
@@ -35,7 +33,6 @@ export class TabService {
       this.Tab[i].string6 = this.Tab[i].string6.split(",");
       this.Tab[i].special = this.Tab[i].special.split(",");
     }
-
   };
 
   addToWorkingTab(rhythm: string, string1: string, string2: string, string3: string, string4: string, string5: string, string6: string, special: string) {
