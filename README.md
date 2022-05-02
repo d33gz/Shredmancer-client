@@ -1,5 +1,7 @@
 # ShredmancerClient
 
+A simple and lightweight Angular system interacting with a Springboot program that allows a User to: log in, view all available TABs, view a FAQ, search through the available TABs, and create TABs.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
 
 ## Development server
