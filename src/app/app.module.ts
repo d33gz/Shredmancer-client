@@ -34,7 +34,7 @@ import { SearchComponent } from './search/search.component';
     SubmitComponent,
     HomepageComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
     WriteTabComponent
   ],
   
