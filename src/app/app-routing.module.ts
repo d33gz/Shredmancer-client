@@ -7,11 +7,11 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { FAQComponent } from './faq/faq.component';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { SubmitComponent } from './submit/submit.component';
-import { TabSearchComponent } from './tab-search/tab-search.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
+import { WriteTabComponent } from './write-tab/write-tab.component';
 
 const routes: Routes = [
   {path: 'tabview', component: TabMainComponent},
@@ -22,8 +22,8 @@ const routes: Routes = [
   {path: 'submit', component: SubmitComponent},
   {path: 'search', component: SearchComponent},
   {path: 'homepage', component: HomepageComponent},
-  {path: '', component: HomeComponent}
-  
+  {path: '', component: HomeComponent},
+  {path: 'write', component: WriteTabComponent}
 ];
 
 @NgModule({

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TabSearchComponent } from './tab-search.component';
+import { WriteTabComponent } from './write-tab.component';
 
-describe('TabSearchComponent', () => {
-  let component: TabSearchComponent;
-  let fixture: ComponentFixture<TabSearchComponent>;
+describe('WriteTabComponent', () => {
+  let component: WriteTabComponent;
+  let fixture: ComponentFixture<WriteTabComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TabSearchComponent ]
+      declarations: [ WriteTabComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TabSearchComponent);
+    fixture = TestBed.createComponent(WriteTabComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

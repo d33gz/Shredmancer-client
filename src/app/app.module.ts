@@ -7,7 +7,6 @@ import { LandingComponent } from './landing/landing.component';
 import { TabMainComponent } from './tab-main/tab-main.component';
 import { CreateTabComponent } from './create-tab/create-tab.component';
 import { FormsModule } from '@angular/forms';
-import { TabSearchComponent } from './tab-search/tab-search.component';
 import { LoginComponent } from './login/login.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { FAQComponent } from './faq/faq.component';
@@ -17,6 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomepageComponent } from './homepage/homepage.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { WriteTabComponent } from './write-tab/write-tab.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { HomeComponent } from './home/home.component';
     LandingComponent,
     TabMainComponent,
     CreateTabComponent,
-    TabSearchComponent,
+    SearchComponent,
     LoginComponent,
     CreateAccountComponent,
     FAQComponent,
@@ -33,6 +34,7 @@ import { HomeComponent } from './home/home.component';
     HomepageComponent,
     FooterComponent,
     HomeComponent
+    WriteTabComponent
   ],
   
   imports: [

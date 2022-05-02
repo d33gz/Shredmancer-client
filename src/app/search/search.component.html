@@ -1,16 +1,24 @@
-<p>search works!</p>
 <!DOCTYPE html>
 <html lang="en">
 
     <head>
-
+        <title>TAB Search</title>
+        <link rel="stylesheet" href="search.component.css">
     </head>
 
     <body>
         <form id="searchForm">
+
             <input type="text" name="search-input" id="searchBar" placeholder="Search TABs..."><br>
             <input type="submit" value="Submit" id="searchSubmit"><br>
+          
+            <input type="text" #searchInput name="search-input" id="search-field" class="search-input-field" placeholder="Search TABs..."><br>
+            <button type="button" id="search-form-submit" (click)="search(searchInput.value)">Search</button><br>
+
         </form>
+        <ul *ngFor="let song of Songs;">
+            <li (click)="getTab($event)" value="{{song.id}}">{{ song.songName  }} - {{ song.bandName }} </li>
+        </ul>
     </body>
 
 </html>

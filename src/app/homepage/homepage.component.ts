@@ -29,6 +29,5 @@ export class HomepageComponent implements OnInit {
     setTimeout(() => this.router.navigate(["/", "tabview"]),4000)
     
   } 
-  
 
 }
