@@ -1,0 +1,15 @@
+body {
+  background-color: #751d1d;
+}
+
+.song-list {
+  display: grid;
+  justify-items: center;
+  background-color: white;
+  list-style-type: none;
+}
+
+.song-list:hover {
+  font-style: italic;
+  cursor: pointer;
+}

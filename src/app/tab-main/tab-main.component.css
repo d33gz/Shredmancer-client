@@ -3,28 +3,38 @@
   font-family: 'Courier New', Courier, monospace;
 }
 
+body {
+  background-color: #751d1d;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
 
+.tabs-inner {
+  display: grid;
+  justify-items: center;
+  background-color: white;
+}
 
-/* .tabs{
-stroke: var(--tab-strings);
-stroke-linecap: square;
-stroke-width: 1;
-fill: none;
-vector-effect: non-scaling-stroke;
-shape-rendering: optimizespeed;
-} */
+/*.tabs {
+  stroke: var(--tab-strings);
+  stroke-linecap: square;
+  stroke-width: 1;
+  fill: none;
+  vector-effect: non-scaling-stroke;
+  shape-rendering: optimizespeed;
+}
 
-/* .tabs {
+.tabs {
   text-decoration: none;
   padding: 10px 11px;
   border-radius: 10px;
   color: rgb(14, 15, 15);
+}*/
 
-} */
-
-/* .tab-line {
+.tab-line {
   text-decoration: none;
   padding: 10px 11px;
   border-radius: 10px;
   color: rgb(14, 15, 15);
-} */
+}

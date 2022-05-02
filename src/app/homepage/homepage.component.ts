@@ -13,21 +13,13 @@ export class HomepageComponent implements OnInit {
   constructor(public songApi: RestApiService, private router: Router,public tabService: TabService) { }
 
   ngOnInit(): void {
-    this.songApi.getAllSongs().subscribe((data: {}) =>{setTimeout(() => {this.Songs = data}, 1000)});
-    console.log("before " + this.Songs);
-    setTimeout(() => console.log("after " + this.Songs), 3000);
+    this.songApi.getAllSongs().subscribe((data: {}) =>{setTimeout(() => {this.Songs = data}, 500)});
   }
   tab : any = [];
   getTab(event : any) {
-    console.log(this.Songs[0]+ "this is songs")
-    console.dir(this.Songs[0])
-    let songId = Number(event.target.value)
-    console.log(songId + "this is song id")
-    // this.songApi.getOneTab(songId).subscribe((data: {}) =>{this.tab = data});
-    this.tabService.getTab(songId)
-    setTimeout(() => console.log(this.tab), 3000);
-    setTimeout(() => this.router.navigate(["/", "tabview"]),4000)
-    
+    let songId = Number(event.target.value);
+    this.tabService.getTab(songId);
+    setTimeout(() => this.router.navigate(["/", "tabview"]), 2000);
   } 
 
 }
