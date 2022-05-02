@@ -49,6 +49,12 @@ export class RestApiService {
     .pipe(retry(1), catchError(this.handleError));
   };
 
+  getSongByName(name: any): Observable<Song> {
+    return this.http
+    .get<Song>(this.apiURL + '/songs/' + name)
+    .pipe(retry(1), catchError(this.handleError));
+  }
+
   handleError(error: any) {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {
