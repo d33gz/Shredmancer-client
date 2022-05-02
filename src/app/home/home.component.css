@@ -1,0 +1,49 @@
+.banner {
+    background-image: url(../../assets/images/dark-rider-JmVaNyemtN8-unsplash.jpg);
+    height: 100vh;
+    background-position: center top;
+    background-size: cover;
+}
+
+.content {
+    top:  50%;
+    left: 1%;
+    position: absolute;
+}
+
+.content h1 {
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.content a {
+    text-decoration: none;
+    background-color: white;
+    color: var(--primary-color);
+    padding: 30px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.content a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.banner h1 {
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    
+}
+
+@media screen and (max-width:600px)
+{
+    .banner
+
+{
+    height: 700px;
+    
+}
+}
