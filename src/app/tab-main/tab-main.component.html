@@ -13,10 +13,10 @@
 
   <!-- <span>Measure #{{ fullTab.measure}} </span>
   <span>Repeat {{ fullTab.repeats }}x</span> -->
-  <div ng-if="!fullTab">
-    <div *ngFor="let tab of fullTab;">
-      <p>{{ tab.rhythm.join('') }}</p>
-      <p>{{ tab.string1.join('') }}</p>
+  <div class="tabs" ng-if="!fullTab">
+    <div class="tabs" *ngFor="let tab of fullTab;">
+      <p class="tab-line">{{ tab.rhythm.join('') }}</p>
+      <p class="tab-line">{{ tab.string1.join('') }}</p>
       <p>{{ tab.string2.join('') }}</p>
       <p>{{ tab.string3.join('') }}</p>
       <p>{{ tab.string4.join('') }}</p>

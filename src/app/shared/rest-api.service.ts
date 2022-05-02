@@ -35,6 +35,7 @@ export class RestApiService {
     return this.http
     .get<Song>(this.apiURL + '/songs/')
     .pipe(retry(1), catchError(this.handleError));
+
   };
 
   getAllTabs(): Observable<Tab> {
@@ -48,6 +49,12 @@ export class RestApiService {
     .get<Tab[]>(this.apiURL + '/tabs/' + id)
     .pipe(retry(1), catchError(this.handleError));
   };
+
+  getSongByName(name: any): Observable<Song> {
+    return this.http
+    .get<Song>(this.apiURL + '/songs/' + name)
+    .pipe(retry(1), catchError(this.handleError));
+  }
 
   handleError(error: any) {
     let errorMessage = '';

@@ -1,4 +1,9 @@
- html {
+/* .banner {
+    background-image: url(../../assets/images/dark-rider-JmVaNyemtN8-unsplash.jpg);
+    height: 100vh;
+  } */
+
+html {
     height: 100%;
     width: 100%;
     
@@ -14,6 +19,7 @@
     align-items: center;
     background-color: #751d1d;
   }
+
   
   #main-holder {
     width: 50%;
