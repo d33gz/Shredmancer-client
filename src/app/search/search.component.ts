@@ -9,10 +9,14 @@ import { TabService } from '../tab.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+
+  @Input() searchDetails = {searchInput: ''};
+
   //searchInput: string = '';
   Songs : any = [];
 
   constructor(public restApi: RestApiService, public router: Router, public tabService: TabService) { }
+
 
   ngOnInit(): void {};
 
@@ -33,6 +37,10 @@ export class SearchComponent implements OnInit {
     setTimeout(() => console.log(this.tab), 3000);
     setTimeout(() => this.router.navigate(["/", "tabview"]),4000)
     
+  }
+
+  search(searchData: any){
+    console.log("Grabbing Data: " + this.searchDetails.searchInput);
   }
 
 }

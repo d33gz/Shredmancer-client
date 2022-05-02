@@ -2,3 +2,29 @@
   white-space: pre-wrap;
   font-family: 'Courier New', Courier, monospace;
 }
+
+
+
+/* .tabs{
+stroke: var(--tab-strings);
+stroke-linecap: square;
+stroke-width: 1;
+fill: none;
+vector-effect: non-scaling-stroke;
+shape-rendering: optimizespeed;
+} */
+
+/* .tabs {
+  text-decoration: none;
+  padding: 10px 11px;
+  border-radius: 10px;
+  color: rgb(14, 15, 15);
+
+} */
+
+/* .tab-line {
+  text-decoration: none;
+  padding: 10px 11px;
+  border-radius: 10px;
+  color: rgb(14, 15, 15);
+} */

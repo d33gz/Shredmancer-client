@@ -1,0 +1,11 @@
+.container {
+    background-image: url(../../assets/images/dark-rider-JmVaNyemtN8-unsplash.jpg);
+    height: 100%;
+    background-position: center top;
+    background-size: cover;
+}
+
+p {
+    color: white;
+    padding: 50px 400px 100px 100px;
+}
