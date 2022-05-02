@@ -10,6 +10,7 @@ import { SubmitComponent } from './submit/submit.component';
 import { TabSearchComponent } from './tab-search/tab-search.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { WriteTabComponent } from './write-tab/write-tab.component';
+import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
   {path: 'tabview', component: TabMainComponent},
@@ -18,7 +19,7 @@ const routes: Routes = [
   {path: 'faq', component: FAQComponent},
   {path: 'favorite', component: FavoriteComponent},
   {path: 'submit', component: SubmitComponent},
-  {path: 'search', component: TabSearchComponent},
+  {path: 'search', component: SearchComponent},
   {path: 'homepage', component: HomepageComponent},
   {path: 'write', component: WriteTabComponent}
 ];
