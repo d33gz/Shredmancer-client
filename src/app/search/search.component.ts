@@ -8,14 +8,14 @@ import { RestApiService } from '../shared/rest-api.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  @Input() searchDetails = {searchInput: ''};
+  //searchInput: string = '';
 
   constructor(public restApi: RestApiService, public router: Router) { }
 
   ngOnInit(): void {};
 
-  search(searchData: any){
-    console.log("Grabbing Data: " + this.searchDetails.searchInput);
+  search(searchInput:string){
+    console.log("Grabbing Data: ",searchInput);
   }
 
 }
