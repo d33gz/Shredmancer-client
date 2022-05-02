@@ -23,7 +23,7 @@ export class SearchComponent implements OnInit {
   search(searchInput:string){
     console.log("Grabbing Data: ",searchInput);
     this.restApi.getSongByName(searchInput).subscribe((data: {}) =>{setTimeout(() => {this.Songs = data}, 1000)});
-    setTimeout(() => console.log(this.Songs), 3000);
+    setTimeout(() => console.log(this.Songs), 2000);
   };
 
   tab : any = [];
@@ -35,7 +35,7 @@ export class SearchComponent implements OnInit {
     // this.songApi.getOneTab(songId).subscribe((data: {}) =>{this.tab = data});
     this.tabService.getTab(songId)
     setTimeout(() => console.log(this.tab), 3000);
-    setTimeout(() => this.router.navigate(["/", "tabview"]), 4000)  
+    setTimeout(() => this.router.navigate(["/", "tabview"]), 2000)  
   };
 
 }

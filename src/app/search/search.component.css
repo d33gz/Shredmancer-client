@@ -1,0 +1,26 @@
+body {
+  background-color: #751d1d;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+#searchForm {
+  display: grid;
+  position: absolute;
+  top: 12%;
+}
+
+.results {
+  display: grid;
+  position: absolute;
+  top: 24%;
+  background-color: white;
+  list-style-type: none;
+  width: 20%;
+}
+
+.results:hover {
+  font-style: italic;
+  cursor: pointer;
+}

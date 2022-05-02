@@ -1,11 +1,4 @@
-<!-- <select (change)="findTab($event)">
-  <option value = 1>Raining Blood - Slayer</option>
-  <option value = 2>Stairway to Heaven - Led Zeppelin</option>
-  <option value = 4>Kickstart My Heart - Mötley Crüe</option>
-  <option value = 5>Wish You Were Here - Pink Floyd</option>
-</select>
-<br> -->
-<div>
+<body>
   <!-- {{activeTab}}
   <h1>{{ fullTab[activeTab].songName }}</h1>
   <h2>By {{ fullTab[activeTab].bandName }}</h2>
@@ -13,8 +6,8 @@
 
   <!-- <span>Measure #{{ fullTab.measure}} </span>
   <span>Repeat {{ fullTab.repeats }}x</span> -->
-  <div class="tabs" ng-if="!fullTab">
-    <div class="tabs" *ngFor="let tab of fullTab;">
+  <div class="tabs-outer" ng-if="!fullTab">
+    <div class="tabs-inner" *ngFor="let tab of fullTab;">
       <p class="tab-line">{{ tab.rhythm.join('') }}</p>
       <p class="tab-line">{{ tab.string1.join('') }}</p>
       <p>{{ tab.string2.join('') }}</p>
@@ -25,7 +18,7 @@
       <p>{{ tab.special.join('') }}</p>
     </div>
   </div>
-
+</body>
     <!-- <p>{{ fullTab.rhythm.join('') }}</p>
     <p>{{ fullTab.string1.join('') }}</p>
     <p>{{ fullTab.string2.join('') }}</p>

@@ -5,7 +5,15 @@
     background-size: cover;
 }
 
+body {
+    background-color: #751d1d;
+}
+
 p {
     color: white;
     padding: 50px 400px 100px 100px;
+}
+
+.text-center {
+    color: white;
 }
