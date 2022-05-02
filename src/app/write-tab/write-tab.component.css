@@ -1,4 +1,41 @@
 * {
   white-space: pre-wrap;
   font-family: 'Courier New', Courier, monospace;
+  /* background-color: aqua; */
+  /* display: grid; */
+  /* align-content: center; */
+  /* justify-items: center;
+  justify-content: center; */
 }
+
+body {
+  background-color: #751d1d;
+}
+
+label {
+  color: white;
+}
+
+span {
+  color: white;
+}
+
+div {
+  color: white;
+  border: 3px;
+}
+
+hr {
+  color: white;
+  background-color: white;
+  padding: 5px 10px 10px 10px;
+  border-radius: 10px;
+}
+
+/* form {
+  background-color: aqua;
+}
+
+html {
+  background-color: aqua;
+} */
